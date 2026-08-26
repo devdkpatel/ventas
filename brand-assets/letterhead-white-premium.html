@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letterhead – White Premium</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: #eef2f7;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 40px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .letterhead {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(15,23,42,0.18);
+    position: relative;
+    padding: 15mm 20mm; /* Margins for printing/viewing */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Add the top accents from the business card */
+  .letterhead::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #0576BC 50%, #CD1D2A 50%);
+  }
+
+  /* Header Section */
+  .lh-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #cbd5e1;
+    position: relative;
+  }
+
+  /* Brand / Logo side */
+  .brand-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo-svg { width: 72px; height: 72px; }
+  .brand-text-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 34px; font-weight: 700;
+    color: #0d1b2a; letter-spacing: 5px;
+    text-transform: uppercase; line-height: 1; margin-top: 4px;
+  }
+  .brand-sub {
+    font-size: 10px; font-weight: 600;
+    color: #6b7a8a; letter-spacing: 5px;
+    text-transform: uppercase; margin-top: 6px;
+  }
+
+  /* Contact side */
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+    margin-top: 6px;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .contact-icon {
+    width: 20px; height: 20px;
+    background: #fff; border: 1.5px solid #0576BC;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .contact-icon svg { width: 9px; height: 9px; fill: #0576BC; }
+  .contact-value {
+    color: #334155;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  /* Letter Content */
+  .lh-body {
+    flex: 1;
+    padding: 50px 0;
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .lh-body p {
+    margin-bottom: 18px;
+  }
+  .date-ref {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #6b7a8a;
+  }
+  .recipient {
+    margin-bottom: 35px;
+  }
+  .recipient strong {
+    color: #0d1b2a;
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .subject {
+    font-weight: 600;
+    color: #0d1b2a;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .subject::before {
+    content: '';
+    width: 4px; height: 16px;
+    background: #CD1D2A;
+    display: inline-block;
+  }
+
+  .sign-off {
+    margin-top: 60px;
+  }
+  .sign-off .person-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px; font-weight: 600;
+    color: #0d1b2a; letter-spacing: 1.5px; margin-top: 50px;
+  }
+  .sign-off .person-title {
+    font-size: 11px; color: #0576BC;
+    letter-spacing: 3px; text-transform: uppercase; margin-top: 6px; font-weight: 600;
+  }
+
+  /* Footer Section */
+  .lh-footer {
+    padding-top: 24px;
+    border-top: 1px solid #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .footer-address {
+    font-size: 9.5px;
+    color: #94a3b8;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+  }
+  .rule { display:flex; align-items:center; gap:10px; margin-bottom: 14px; }
+  .rule .dot { width:5px; height:5px; border-radius:50%; background:#CD1D2A; }
+  .rule .seg { width:45px; height:1px; background:#cbd5e1; }
+</style>
+</head>
+<body>
+
+<div class="letterhead">
+  
+  <div class="lh-header">
+    <div class="brand-section">
+      <!-- Same logo from business card -->
+      <svg class="logo-svg" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M210.373 164.673L266.609 164.669L512.652 550.136L485.705 591.144L210.373 164.673Z" fill="#0576BC"/>
+        <path d="M896.081 164.571L843.055 164.571L442.356 780.952L471.512 821.166L896.081 164.571Z" fill="#CD1D2A"/>
+        <path d="M978.449 164.571L926.241 164.571L483.642 844.301L511.837 885.997L978.449 164.571Z" fill="#CD1D2A"/>
+        <path d="M128.356 164.672L182.252 164.673L471.645 612.237L444.147 654.131L128.356 164.672Z" fill="#0576BC"/>
+        <path d="M44.8696 164.571L100.238 164.571L431.811 679.02L402.967 718.667L44.8696 164.571Z" fill="#0576BC"/>
+        <path d="M814.385 164.571L761.04 164.571L402.52 717.684L429.545 759.905L814.385 164.571Z" fill="#CD1D2A"/>
+      </svg>
+      <div class="brand-text-wrapper">
+        <div class="brand-name">Ventas</div>
+        <div class="brand-sub">Dampers Automation</div>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <div class="contact-item">
+        <span class="contact-value">+91 94261 71710</span>
+        <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01z"/></svg></div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-value">info@ventasdampers.com</span>
+        <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-value">www.ventasdampers.com</span>
+        <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lh-body">
+    <div class="date-ref">
+      <span>Ref: VD/2026/08/101</span>
+      <span>Date: August 11, 2026</span>
+    </div>
+
+    <div class="recipient">
+      <strong>To,</strong>
+      <strong>John Doe</strong>
+      Director of Procurement<br>
+      Global Industries Pvt. Ltd.<br>
+      New Delhi, India
+    </div>
+
+    <div class="subject">
+      Subject: Proposal for Automated Industrial Dampers
+    </div>
+
+    <p>Dear Mr. Doe,</p>
+    
+    <p>Thank you for giving us the opportunity to present our company, Ventas Dampers Automation. We are pleased to submit our formal proposal for the supply and installation of automated industrial dampers for your upcoming plant expansion project.</p>
+
+    <p>As discussed during our meeting last week, our premium range of dampers is designed to offer maximum efficiency, low maintenance, and high durability under extreme industrial conditions. Our team of expert engineers has thoroughly reviewed your specifications and we are confident that our solutions will exceed your expectations.</p>
+
+    <p>Enclosed with this letter, please find the detailed technical specifications, pricing breakdown, and the estimated delivery timeline. We remain committed to providing top-notch quality and dedicated after-sales support.</p>
+
+    <p>Please feel free to reach out if you have any questions or require further clarification on any aspect of this proposal. We look forward to the possibility of a fruitful collaboration.</p>
+
+    <div class="sign-off">
+      <p>Sincerely,</p>
+      <div class="person-name">Amit Padia</div>
+      <div class="person-title">Chief Managing Director</div>
+    </div>
+  </div>
+
+  <div class="lh-footer">
+    <div class="rule"><span class="seg"></span><span class="dot"></span><span class="seg"></span></div>
+    <div class="footer-address">
+      VENTAS DAMPERS AUTOMATION | AHMEDABAD, GUJARAT, INDIA
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
